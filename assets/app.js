@@ -19,51 +19,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // SVG Target Dials Animations
-    const targets1 = document.querySelectorAll('.gauge-target-1');
-    
-    const animateCircle = (circle, value, circumference) => {
-        const targetOffset = circumference - (circumference * value / 100);
-        let currentOffset = circumference;
-        const speed = 3.5;
-        
-        const animate = () => {
-            if (currentOffset > targetOffset) {
-                currentOffset -= speed;
-                circle.style.strokeDashoffset = currentOffset;
-                requestAnimationFrame(animate);
-            } else {
-                circle.style.strokeDashoffset = targetOffset;
-            }
-        };
-        
-        circle.style.strokeDasharray = circumference;
-        circle.style.strokeDashoffset = circumference;
-        
-        setTimeout(animate, 100);
-    };
-
-    if (targets1.length > 0) {
-        const targetObserver = new IntersectionObserver((entries) => {
+    // Liquid Fluid Gauges Animations
+    const fluidFills = document.querySelectorAll('.fluid-fill');
+    if (fluidFills.length > 0) {
+        const fluidObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const c1 = entry.target;
-                    const value = parseInt(c1.getAttribute('data-value'), 10);
-                    animateCircle(c1, value, 251.2);
-                    
-                    const parent = c1.closest('.target-svg-container');
-                    const c2 = parent.querySelector('.gauge-target-2');
-                    if (c2) {
-                        animateCircle(c2, value * 0.85, 175.9);
-                    }
-                    
-                    targetObserver.unobserve(c1);
+                    const fill = entry.target;
+                    const finalHeight = fill.getAttribute('data-height');
+                    fill.style.height = finalHeight;
+                    fluidObserver.unobserve(fill);
                 }
             });
         }, {
-            threshold: 0.5
+            threshold: 0.1
         });
 
-        targets1.forEach(t => targetObserver.observe(t));
+        fluidFills.forEach(fill => fluidObserver.observe(fill));
+    }
+
+    // Horizontal Workbench Tabs Logic
+    const tabButtons = document.querySelectorAll('.workbench-tab-button');
+    const tabPanes = document.querySelectorAll('.workbench-tab-pane');
+
+    if (tabButtons.length > 0) {
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+                
+                // Clear active button
+                tabButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Toggle visibility on target panes
+                tabPanes.forEach(pane => {
+                    if (pane.id === targetId) {
+                        pane.classList.add('active');
+                    } else {
+                        pane.classList.remove('active');
+                    }
+                });
+            });
+        });
     }
 });
+

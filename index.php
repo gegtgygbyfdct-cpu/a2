@@ -178,7 +178,7 @@
     </section>
     <!-- Section 2 End -->
 
-    <!-- Section 3: Fabric Specifications Table -->
+    <!-- Section 3: Staggered Metric Grid with Ribbon Headers -->
     <section class="specs-section">
         <div class="container">
             <div class="section-title" data-reveal>
@@ -186,47 +186,52 @@
                 <h2>Atelier Material Specs</h2>
             </div>
             
-            <table class="luxury-specs-table" data-reveal="zoom">
-                <thead>
-                    <tr>
-                        <th>Fabric Type</th>
-                        <th>Seam Tension</th>
-                        <th>Weave Density</th>
-                        <th>DWR Spray Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Imperial Silk Gown</strong></td>
-                        <td>42 N tension force</td>
-                        <td>480 threads/inch</td>
-                        <td>Hydrophobic mist (Grade A)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Textured Wool Overcoat</strong></td>
-                        <td>58 N tension force</td>
-                        <td>320 threads/inch</td>
-                        <td>Weather shield membrane coating</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Silver Sage Linen Blazer</strong></td>
-                        <td>35 N tension force</td>
-                        <td>280 threads/inch</td>
-                        <td>Natural wax spray sealer</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Velvet Evening Dress</strong></td>
-                        <td>46 N tension force</td>
-                        <td>520 threads/inch</td>
-                        <td>Anti-moisture spray coating</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="staggered-specs-block">
+                <!-- Row 1 -->
+                <div class="specs-block-row" data-reveal="zoom">
+                    <div class="specs-block-title">Imperial Silk Gown</div>
+                    <div class="specs-block-details">
+                        <div class="specs-detail-pill"><span>Tension:</span> 42 N tension force</div>
+                        <div class="specs-detail-pill"><span>Weave:</span> 480 threads/inch</div>
+                        <div class="specs-detail-pill"><span>DWR:</span> Hydrophobic (Grade A)</div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="specs-block-row" data-reveal="zoom">
+                    <div class="specs-block-title">Textured Wool Overcoat</div>
+                    <div class="specs-block-details">
+                        <div class="specs-detail-pill"><span>Tension:</span> 58 N tension force</div>
+                        <div class="specs-detail-pill"><span>Weave:</span> 320 threads/inch</div>
+                        <div class="specs-detail-pill"><span>DWR:</span> Weather shield membrane</div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="specs-block-row" data-reveal="zoom">
+                    <div class="specs-block-title">Silver Sage Linen Blazer</div>
+                    <div class="specs-block-details">
+                        <div class="specs-detail-pill"><span>Tension:</span> 35 N tension force</div>
+                        <div class="specs-detail-pill"><span>Weave:</span> 280 threads/inch</div>
+                        <div class="specs-detail-pill"><span>DWR:</span> Natural wax spray</div>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="specs-block-row" data-reveal="zoom">
+                    <div class="specs-block-title">Velvet Evening Dress</div>
+                    <div class="specs-block-details">
+                        <div class="specs-detail-pill"><span>Tension:</span> 46 N tension force</div>
+                        <div class="specs-detail-pill"><span>Weave:</span> 520 threads/inch</div>
+                        <div class="specs-detail-pill"><span>DWR:</span> Anti-moisture spray</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Section 3 End -->
 
-    <!-- Section 4: Concentric Circle Target Dials (SVG Gauges) -->
+    <!-- Section 4: Vertical Liquid Fluid Gauges -->
     <section class="gauges-section">
         <div class="container">
             <div class="section-title" data-reveal>
@@ -236,55 +241,40 @@
             
             <div class="gauges-grid">
                 <!-- Gauge 1 -->
-                <div class="gauge-item" data-reveal="zoom">
-                    <div class="target-svg-container">
-                        <svg viewBox="0 0 100 100">
-                            <circle cx="50" cy="50" r="40" fill="none" stroke="var(--border-color)" stroke-width="4" />
-                            <circle cx="50" cy="50" r="40" fill="none" stroke="var(--accent-color)" stroke-width="6" stroke-dasharray="251.2" stroke-dashoffset="251.2" class="gauge-target-1" data-value="95" />
-                            <circle cx="50" cy="50" r="28" fill="none" stroke="var(--border-color)" stroke-width="4" />
-                            <circle cx="50" cy="50" r="28" fill="none" stroke="var(--accent-peach)" stroke-width="6" stroke-dasharray="175.9" stroke-dashoffset="175.9" class="gauge-target-2" />
-                        </svg>
-                        <div class="gauge-val">95%</div>
+                <div class="fluid-gauge-item" data-reveal="zoom">
+                    <div class="fluid-glass-tube">
+                        <div class="fluid-fill" data-height="95%" style="height: 0%;"></div>
                     </div>
                     <h4>Weave Density</h4>
                     <p>Calculated loops count per millimeter of warp lines.</p>
+                    <div class="fluid-value-badge">95% Density</div>
                 </div>
                 
                 <!-- Gauge 2 -->
-                <div class="gauge-item" data-reveal="zoom">
-                    <div class="target-svg-container">
-                        <svg viewBox="0 0 100 100">
-                            <circle cx="50" cy="50" r="40" fill="none" stroke="var(--border-color)" stroke-width="4" />
-                            <circle cx="50" cy="50" r="40" fill="none" stroke="var(--accent-peach)" stroke-width="6" stroke-dasharray="251.2" stroke-dashoffset="251.2" class="gauge-target-1" data-value="90" />
-                            <circle cx="50" cy="50" r="28" fill="none" stroke="var(--border-color)" stroke-width="4" />
-                            <circle cx="50" cy="50" r="28" fill="none" stroke="var(--accent-color)" stroke-width="6" stroke-dasharray="175.9" stroke-dashoffset="175.9" class="gauge-target-2" />
-                        </svg>
-                        <div class="gauge-val">90%</div>
+                <div class="fluid-gauge-item" data-reveal="zoom">
+                    <div class="fluid-glass-tube">
+                        <div class="fluid-fill" data-height="90%" style="height: 0%;"></div>
                     </div>
                     <h4>Fit Ease</h4>
                     <p>Measurement clearances mapped across shoulder curves.</p>
+                    <div class="fluid-value-badge">90% Clearance</div>
                 </div>
                 
                 <!-- Gauge 3 -->
-                <div class="gauge-item" data-reveal="zoom">
-                    <div class="target-svg-container">
-                        <svg viewBox="0 0 100 100">
-                            <circle cx="50" cy="50" r="40" fill="none" stroke="var(--border-color)" stroke-width="4" />
-                            <circle cx="50" cy="50" r="40" fill="none" stroke="var(--accent-color)" stroke-width="6" stroke-dasharray="251.2" stroke-dashoffset="251.2" class="gauge-target-1" data-value="98" />
-                            <circle cx="50" cy="50" r="28" fill="none" stroke="var(--border-color)" stroke-width="4" />
-                            <circle cx="50" cy="50" r="28" fill="none" stroke="var(--accent-peach)" stroke-width="6" stroke-dasharray="175.9" stroke-dashoffset="175.9" class="gauge-target-2" />
-                        </svg>
-                        <div class="gauge-val">98%</div>
+                <div class="fluid-gauge-item" data-reveal="zoom">
+                    <div class="fluid-glass-tube">
+                        <div class="fluid-fill" data-height="98%" style="height: 0%;"></div>
                     </div>
                     <h4>Stitch Accuracy</h4>
                     <p>Laser checked stitch alignments against line paths.</p>
+                    <div class="fluid-value-badge">98% Accuracy</div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Section 4 End -->
 
-    <!-- Section 5: The Design Atelier Workbench -->
+    <!-- Section 5: Horizontal Split-Screen Workbench Showcase -->
     <section class="workbench-section">
         <div class="container">
             <div class="section-title" data-reveal>
@@ -292,33 +282,66 @@
                 <h2>The Design Atelier Workbench</h2>
             </div>
             
-            <div class="workbench-grid">
-                <!-- Card 1 -->
-                <div class="workbench-card" data-reveal="left">
-                    <i class="fa-solid fa-pen-ruler"></i>
-                    <h3>Pattern Drafting</h3>
-                    <p>Drafting geometric jacket panel sections against size coordinates to balance alignment ratios.</p>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="workbench-card" data-reveal="zoom">
-                    <i class="fa-solid fa-scissors"></i>
-                    <h3>Shear Fiber Cut</h3>
-                    <p>Auditing blade cut friction indexes to ensure silk margins remain free of thread frays.</p>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="workbench-card" data-reveal="right">
-                    <i class="fa-solid fa-tarp-asterisk"></i>
-                    <h3>Drape Flow Sweep</h3>
-                    <p>Evaluating fabric drop weights under gravity sweeps to map dress silhouette contours.</p>
+            <div class="workbench-showcase-container" data-reveal="zoom">
+                <div class="row g-0">
+                    <!-- Left Tabs List -->
+                    <div class="col-md-5">
+                        <div class="workbench-tabs-list">
+                            <div class="workbench-tab-button active" data-target="wb-pane-0">
+                                <i class="fa-solid fa-pen-ruler"></i>
+                                <span>01 // Pattern Drafting</span>
+                            </div>
+                            <div class="workbench-tab-button" data-target="wb-pane-1">
+                                <i class="fa-solid fa-scissors"></i>
+                                <span>02 // Shear Fiber Cut</span>
+                            </div>
+                            <div class="workbench-tab-button" data-target="wb-pane-2">
+                                <i class="fa-solid fa-tarp-asterisk"></i>
+                                <span>03 // Drape Flow Sweep</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Tab Panels -->
+                    <div class="col-md-7">
+                        <div class="workbench-tab-content-panel">
+                            <!-- Pane 1 -->
+                            <div class="workbench-tab-pane active" id="wb-pane-0">
+                                <h3>Pattern Drafting Coordinates</h3>
+                                <p>Drafting geometric jacket panel sections against size coordinates to balance alignment ratios and arm sweeps. This establishes critical sleeve clearances prior to material cutting runs.</p>
+                                <div class="workbench-tools-list">
+                                    <div class="workbench-tool-tag">Laser Layout Grid</div>
+                                    <div class="workbench-tool-tag">Tolerance: +/-0.5mm</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Pane 2 -->
+                            <div class="workbench-tab-pane" id="wb-pane-1">
+                                <h3>Shear Fiber Cut Analysis</h3>
+                                <p>Auditing blade cut friction indexes and blade wear curves to ensure silk dress margins remain 100% free of thread frays. Uncut fibers are scanned via camera sensors.</p>
+                                <div class="workbench-tools-list">
+                                    <div class="workbench-tool-tag">Diamond Rotary Blade</div>
+                                    <div class="workbench-tool-tag">Friction Index: 0.12</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Pane 3 -->
+                            <div class="workbench-tab-pane" id="wb-pane-2">
+                                <h3>Drape Flow Sweep Calibrations</h3>
+                                <p>Evaluating fabric drop weights under gravity sweeps inside vacuum tunnels to map silk evening dress silhouette contours. Fluid flow deflection angles are graphed immediately.</p>
+                                <div class="workbench-tools-list">
+                                    <div class="workbench-tool-tag">Gravity Frame</div>
+                                    <div class="workbench-tool-tag">Deflection Angle: 15deg</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Section 5 End -->
 
-    <!-- Section 6: Logged Fitting Sessions -->
+    <!-- Section 6: Haute Couture Timeline Feed -->
     <section class="dinner-logs-section">
         <div class="container">
             <div class="section-title" data-reveal>
@@ -326,55 +349,43 @@
                 <h2>Logged Fitting Benchmarks</h2>
             </div>
             
-            <div class="logs-list" data-reveal="zoom">
-                <!-- Log 1 -->
-                <div class="log-item">
-                    <div class="log-profile">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <div>
-                            <strong style="display: block;">Fitting ID: VMF-Fit-502</strong>
-                            <span style="font-size: 12px; opacity: 0.8;">Location: Milan Suite A // Audited at: 4:15 PM CET</span>
+            <div class="timeline-feed-wrapper" data-reveal="zoom">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-feed-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-box">
+                        <div class="timeline-header">
+                            <strong>Fitting ID: VMF-Fit-502</strong>
+                            <span class="timeline-time">Milan Suite A // 4:15 PM CET</span>
                         </div>
-                    </div>
-                    <div class="log-details">
-                        Style: Imperial Gown // Tension: 42N // Clearance: 15mm
-                    </div>
-                    <div class="log-status">
-                        Verified Compliant
+                        <p>Style: Imperial Gown // Tension: 42N // Weave Density: 480tpi // Clearance: 15mm gap check</p>
+                        <div class="timeline-tag">Verified Compliant</div>
                     </div>
                 </div>
 
-                <!-- Log 2 -->
-                <div class="log-item">
-                    <div class="log-profile">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <div>
-                            <strong style="display: block;">Fitting ID: VMF-Fit-308</strong>
-                            <span style="font-size: 12px; opacity: 0.8;">Location: Paris Deck 3 // Audited at: 5:30 PM CET</span>
+                <!-- Timeline Item 2 -->
+                <div class="timeline-feed-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-box">
+                        <div class="timeline-header">
+                            <strong>Fitting ID: VMF-Fit-308</strong>
+                            <span class="timeline-time">Paris Deck 3 // 5:30 PM CET</span>
                         </div>
-                    </div>
-                    <div class="log-details">
-                        Style: Wool Overcoat // Tension: 58N // Clearance: 22mm
-                    </div>
-                    <div class="log-status">
-                        Verified Compliant
+                        <p>Style: Wool Overcoat // Tension: 58N // Weave Density: 320tpi // Clearance: 22mm gap check</p>
+                        <div class="timeline-tag">Verified Compliant</div>
                     </div>
                 </div>
 
-                <!-- Log 3 -->
-                <div class="log-item">
-                    <div class="log-profile">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <div>
-                            <strong style="display: block;">Fitting ID: VMF-Fit-104</strong>
-                            <span style="font-size: 12px; opacity: 0.8;">Location: London Room 2 // Audited at: 6:10 PM GMT</span>
+                <!-- Timeline Item 3 -->
+                <div class="timeline-feed-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-box">
+                        <div class="timeline-header">
+                            <strong>Fitting ID: VMF-Fit-104</strong>
+                            <span class="timeline-time">London Room 2 // 6:10 PM GMT</span>
                         </div>
-                    </div>
-                    <div class="log-details">
-                        Style: Linen Blazer // Tension: 35N // Clearance: 12mm
-                    </div>
-                    <div class="log-status">
-                        Verified Compliant
+                        <p>Style: Linen Blazer // Tension: 35N // Weave Density: 280tpi // Clearance: 12mm gap check</p>
+                        <div class="timeline-tag">Verified Compliant</div>
                     </div>
                 </div>
             </div>
